@@ -1,0 +1,9 @@
+.searchbar__form-categories button {
+    background-color: #dfdfdf;
+    color: var(--gray-text-color);
+    height: 95%;
+    padding: 0 0.3rem;
+    border: 0.5px solid var(--gray-text-color);
+    outline: none;
+    cursor: pointer;
+}

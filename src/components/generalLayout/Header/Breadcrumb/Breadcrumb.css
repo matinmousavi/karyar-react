@@ -1,0 +1,15 @@
+.breadcrumb {
+    border-bottom: 2px solid var(--light-text);
+}
+.breadcrumb__item {
+    font-size: 1.1rem;
+    color: var(--gray-text-color);
+    text-transform: uppercase;
+}
+.breadcrumb__item span {
+    margin: 0 1.5rem;
+    font-size: 1.6rem;
+}
+.breadcrumb__link--active {
+    color: var(--dark-color);
+}

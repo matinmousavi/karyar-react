@@ -1,0 +1,24 @@
+.topbar {
+    background-color: #1f1f29;
+    padding: 1rem 0;
+}
+.topbar__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.topbar svg {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+.topbar__left {
+    width: 35%;
+}
+.topbar__right {
+    width: 13%;
+}
+.topbar__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
