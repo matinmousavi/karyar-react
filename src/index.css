@@ -1,0 +1,32 @@
+:root {
+  --primary-color: #d20025;
+  --dark-color: #15151d;
+  --gray-text-color: #c5c1c6;
+  --light-text: #e0ddde;
+}
+
+*, *::after, *::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: sans-serif;
+  line-height: 1.6;
+}
+img, picture, video, canvas, svg {
+  max-width: 100%;
+  display: block;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+ul, ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
