@@ -5,12 +5,3 @@
 .topbar, .searchbar {
     color: var(--light-text);
 }
-
-
-
-.main {
-    background-color: tomato;
-}
-.footer {
-    background-color: greenyellow;
-}

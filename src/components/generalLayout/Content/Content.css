@@ -1,0 +1,75 @@
+.main {
+    display: flex;
+    margin-top: 5rem;
+    gap: 4rem;
+    justify-content: space-between;
+}
+.filter-products {
+    flex: 0.5;
+}
+.filter__form {
+    margin-bottom: 3rem;
+}
+.filter__form__title {
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+}
+.number-input__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.number-input:first-child {
+    position: relative;
+}
+.number-input:first-child::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 108%;
+    transform: translateY(-50%);
+    height: 0.2px;
+    width: 4px;
+    background-color: #000;
+}
+.number-input {
+    width: 46%;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid var(--light-text);
+}
+.number-input__span input {
+    /* display: flex; */
+    padding: 0 0 0 1rem;
+    font-size: 1.2rem;
+    outline: none;
+    border: none;
+    width: 100%;
+    height: 100%;
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+.number-input__buttons {
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid var(--light-text);
+}
+.number-input__buttons span:not(:last-child) {
+    border-bottom: 1px solid var(--light-text);
+}
+.number-input__buttons span {
+    padding: 0 0.5rem;
+    cursor: pointer;
+    font-size: 1.4rem;
+    text-align: center;
+    line-height: 1.2;
+}
+.products {
+    border: 1px solid #000;
+    flex: 2;
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
