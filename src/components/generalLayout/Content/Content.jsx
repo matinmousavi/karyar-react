@@ -6,6 +6,16 @@ import './Content.css';
 import DropdownButton from '../../kit/DropdownButton/DropdownButton';
 import { MdViewList } from 'react-icons/md';
 import { TfiLayoutGrid3Alt } from 'react-icons/tfi';
+import ProductCart from './ProductCart/ProductCart';
+import pc from '../../../assets/images/pc.webp'
+import monitor from '../../../assets/images/monitor.jpg'
+import mobile from '../../../assets/images/mobile.jpg'
+import laptop from '../../../assets/images/laptop.webp'
+import laptopBackpack from '../../../assets/images/laptop-backpack.jpg'
+import keyboard from '../../../assets/images/keyboard.webp'
+import headphonewebp from '../../../assets/images/headphonewebp.webp'
+import coolpad from '../../../assets/images/coolpad.webp'
+import camera from '../../../assets/images/camera.jpg'
 
 const Content = () => {
   const [minPrice, setMinPrice] = useState(0);
@@ -157,7 +167,7 @@ const Content = () => {
               <div className='select__wrapper'>
                 <label htmlFor="" className='select__label'>show:</label>
                 <div className="select-input__wrapper">
-                  <select name="" id="" className='select-input' style={{width:"60px"}}>
+                  <select name="" id="" className='select-input' style={{ width: "60px" }}>
                     <option value="" className='select-option'>10</option>
                     <option value="" className='select-option'>15</option>
                     <option value="" className='select-option'>20</option>
@@ -177,7 +187,83 @@ const Content = () => {
               </div>
             </div>
           </div>
-          <div className="products__body"></div>
+          <div className="products__body">
+            <ProductCart
+              rate={5}
+              productName="product name 1"
+              img={pc}
+              price="900.00"
+              oldPrice="990.00"
+            />
+            <ProductCart
+              rate={3}
+              productName="product name 2"
+              img={monitor}
+              price="80.00"
+              oldPrice="880.00"
+            />
+            <ProductCart
+              rate={0}
+              productName="product name 3"
+              img={mobile}
+              price="700.00"
+              oldPrice="770.00"
+            />
+            <ProductCart
+              rate={5}
+              productName="product name 4"
+              img={laptop}
+              price="600.00"
+              oldPrice="660.00"
+            />
+            <ProductCart
+              rate={2}
+              productName="product name 5"
+              img={laptopBackpack}
+              price="500.00"
+              oldPrice="550.00"
+            />
+            <ProductCart
+              rate={1}
+              productName="product name 6"
+              img={keyboard}
+              price="400.00"
+              oldPrice="440.00"
+            />
+            <ProductCart
+              rate={4}
+              productName="product name 7"
+              img={headphonewebp}
+              price="300.00"
+              oldPrice="330.00"
+            />
+            <ProductCart
+              rate={0}
+              productName="product name 8"
+              img={coolpad}
+              price="200.00"
+              oldPrice="220.00"
+            />
+            <ProductCart
+              rate={5}
+              productName="product name 9"
+              img={camera}
+              price="100.00"
+              oldPrice="110.00"
+            />
+            <div className='products__footer'>
+              <span className='products__footer-span'>SHOPING 20-100 PRODUCTS</span>
+              <div className='product_pagination'>
+                <span className='active'>1</span>
+                <span>2</span>
+                <span>3</span>
+                <span>4</span>
+                <span>5</span>
+              </div>
+            </div>
+
+          </div>
+
         </div>
       </main>
     </div>
