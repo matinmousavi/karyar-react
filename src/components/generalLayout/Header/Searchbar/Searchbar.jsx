@@ -1,16 +1,10 @@
-import React, { useState } from 'react'
+import React from 'react'
 import "./Searchbar.css"
 import { FaCartShopping } from 'react-icons/fa6'
 import { FaRegHeart } from 'react-icons/fa'
-import DropdownButton from '../../../kit/DropdownButton/DropdownButton'
-import Dropdown from '../../../kit/Dropdown/Dropdown'
+import SearchbarInput from '../../../kit/SearchbarInput/SearchbarInput'
 
 const Searchbar = () => {
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-
-  const toggleDropdown = () => {
-    setIsDropdownOpen(!isDropdownOpen);
-  };
   return (
     <>
       <div className='searchbar'>
@@ -19,19 +13,7 @@ const Searchbar = () => {
             <div className='searchbar__logo'>
               <h1>Electro<span className=''>.</span></h1>
             </div>
-            <div className='searchbar__form'>
-              <div className="searchbar__form-categories"  onClick={toggleDropdown}>
-                <span>All Categories</span>
-                <DropdownButton
-                  className="searchbar__form-categories-button"
-                />
-                {isDropdownOpen&& <Dropdown />}
-              </div>
-              <div className="searchbar__form-input">
-                <input type="text" placeholder='Search here' />
-              </div>
-              <button className="searchbar__form-button">Search</button>
-            </div>
+            <SearchbarInput action="header" />
             <div className='searchbar__icons'>
               <div className='searchbar__icon'>
                 <FaRegHeart />

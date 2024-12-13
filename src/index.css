@@ -3,6 +3,7 @@
   --dark-color: #15151d;
   --gray-text-color: #727272;
   --light-text: #e0ddde;
+  --border-style: 1px solid var(--light-text);
 }
 
 *, *::after, *::before {

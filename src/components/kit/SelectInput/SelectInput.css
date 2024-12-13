@@ -1,0 +1,66 @@
+/* select Input component */
+.select__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 3rem;
+}
+.select__label {
+    margin-right: 0.6rem;
+    text-transform: uppercase;
+}
+.select-input__wrapper {
+    border: var(--border-style);
+    position: relative;
+    flex: 1;
+}
+.select-input {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    appearance: unset;
+    width: 100%;
+    background-color: transparent;
+    padding: 0.8rem 0 0.8rem 1rem;
+}
+.select-input__wrapper button {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    border: inherit;
+    z-index: -2;
+    color: #818181;
+}/* select Input component */
+.select__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 3rem;
+}
+.select__label {
+    margin-right: 0.6rem;
+    text-transform: uppercase;
+}
+.select-input__wrapper {
+    border: var(--border-style);
+    position: relative;
+}
+.select-input {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    appearance: unset;
+    width: 100%;
+    background-color: transparent;
+    padding: 0.8rem 0 0.8rem 1rem;
+}
+.select-input__wrapper button {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    border: inherit;
+    z-index: -2;
+    color: #818181;
+}

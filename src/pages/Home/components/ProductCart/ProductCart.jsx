@@ -5,9 +5,10 @@ import { CiHeart } from 'react-icons/ci';
 import { FaArrowRightArrowLeft } from 'react-icons/fa6';
 import { IoEyeSharp } from 'react-icons/io5';
 
-const ProductCart = ({ img, productName, price, oldPrice , rate }) => {
+const ProductCart = ({ img, productName, price, oldPrice , rate , onClick }) => {
+
     return (
-        <div className='product_cart'>
+        <div className='product_cart' onClick={onClick}>
             <div className='product_cart_top'>
                 <span className='product_cart_off'>-30%</span>
                 <span className='product_cart_new'>NEW</span>
