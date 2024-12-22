@@ -2,7 +2,7 @@
     border-top: var(--border-style);
 }
 .footer__newsletter {
-    margin: 3rem 0;
+    margin: 3rem 0 0 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -11,9 +11,6 @@
 .footer__newsletter-title {
     margin-bottom: 2rem;
     font-weight: 100;
-}
-.footer__newsletter-title span {
-    
 }
 .social-media__wrapper {
     display: flex;

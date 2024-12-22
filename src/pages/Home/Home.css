@@ -85,7 +85,6 @@
 .products__header-view {
     display: flex;
 }
-
 .products__header-icons {
     display: flex;
     align-items: center;
@@ -117,7 +116,7 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
-    margin-top: .5rem;
+    margin-top: 2.5rem;
 }
 .products__footer-pagination {
     display: flex;

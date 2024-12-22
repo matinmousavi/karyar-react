@@ -1,4 +1,5 @@
 import React from 'react'
+import "./Header.css"
 import Topbar from './Topbar/Topbar'
 import Searchbar from './Searchbar/Searchbar'
 import Navbar from './Navbar/Navbar'

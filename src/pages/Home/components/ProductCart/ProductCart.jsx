@@ -1,12 +1,10 @@
 import React from 'react'
 import "./ProductCart.css"
-import { FaStar } from 'react-icons/fa';
 import { CiHeart } from 'react-icons/ci';
 import { FaArrowRightArrowLeft } from 'react-icons/fa6';
 import { IoEyeSharp } from 'react-icons/io5';
 
-const ProductCart = ({ img, productName, price, oldPrice , rate , onClick }) => {
-
+const ProductCart = ({ img, productName, price , productCategory, onClick }) => {
     return (
         <div className='product_cart' onClick={onClick}>
             <div className='product_cart_top'>
@@ -16,16 +14,10 @@ const ProductCart = ({ img, productName, price, oldPrice , rate , onClick }) => 
             <div className='product_cart_image'>
                 <img src={img} alt="product-image" />
             </div>
-            <p className='product_cart_category'>CATEGORY</p>
+            <p className='product_cart_category'>{productCategory}</p>
             <p className='product_cart_description'>{productName}</p>
             <div className='product_cart_discount'>
                 <span className='product_cart_discount_main'>${price}</span>
-                <del className='product_cart_discount_delet'>${oldPrice}</del>
-            </div>
-            <div className='product_cart_stars'>
-                {Array.from({ length: rate }, (_, index) => (
-                    <FaStar key={index} />
-                ))}
             </div>
             <div className='product_cart_footer_icons'>
                 <CiHeart />

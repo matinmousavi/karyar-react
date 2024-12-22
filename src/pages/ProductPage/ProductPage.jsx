@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import "./ProductPage.css"
 import camera from '../../assets/images/camera.jpg'
 import { FaStar } from "react-icons/fa";
-import DropdownButton from '../../components/kit/DropdownButton/DropdownButton'
 import { CiHeart } from "react-icons/ci";
 import RangeSlider from 'react-range-slider-input';
 import { FaArrowRightArrowLeft } from "react-icons/fa6";
@@ -12,14 +11,12 @@ import { FaGooglePlusG } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { FaArrowUp } from "react-icons/fa";
 import { FaArrowDown } from "react-icons/fa";
-import { IoEyeSharp } from "react-icons/io5";
-import { products } from '../../mocks/products';
 import ProductCart from '../Home/components/ProductCart/ProductCart';
 import SelectInput from '../../components/kit/SelectInput/SelectInput';
 
 const ProductPage = () => {
 
-  const [value, setValue] = useState(50); // مقدار اولیه تک عددی
+  const [value, setValue] = useState(50);
 
   return (
     <div className='ProductPage'>
@@ -251,7 +248,7 @@ const ProductPage = () => {
 
           <div className='parent_ProductPage_related_item'>
             {
-              products.splice(0, 4).map(product =>
+              products.slice(0, 4).map(product =>
                 <ProductCart
                   key={product.id}
                   img={product.img}
@@ -259,7 +256,7 @@ const ProductPage = () => {
                   price={product.price}
                   productName={product.productName}
                   rate={product.rate}
-                  onClick={(navigationHandler) => navigate(`/product/${product.id}`)}
+                  onClick={() => navigate(`/product/${product.id}`)}
                 />
               )
             }
