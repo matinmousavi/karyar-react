@@ -3,6 +3,7 @@ import "./Searchbar.css"
 import { FaCartShopping } from 'react-icons/fa6'
 import { FaRegHeart } from 'react-icons/fa'
 import SearchbarInput from '../../../kit/SearchbarInput/SearchbarInput'
+import { Link } from 'react-router-dom'
 
 const Searchbar = () => {
   return (
@@ -11,7 +12,12 @@ const Searchbar = () => {
         <div className="container">
           <div className="searchbar__content">
             <div className='searchbar__logo'>
-              <h1>Electro<span className=''>.</span></h1>
+              <h1>
+                <Link to="/">
+                  Electro
+                  <span>.</span>
+                </Link>
+              </h1>
             </div>
             <SearchbarInput action="header" />
             <div className='searchbar__icons'>

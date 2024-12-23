@@ -185,7 +185,7 @@ const Home = () => {
                         productCategory={product?.category.name}
                         price={product?.price.toFixed(2)}
                         productName={product?.name}
-                        onClick={() => navigate(`/product/${product?.id}`)}
+                        onClick={() => navigate(`/product/${product?._id}`)}
                       />
                     )
                   }
