@@ -9,35 +9,15 @@ import { FaAngleRight } from "react-icons/fa";
 import SquareBox from "../../components/kit/SquareBox/SquareBox.jsx";
 import { useNavigate } from "react-router-dom";
 import SelectInput from "../../components/kit/SelectInput/SelectInput.jsx";
-import { BASE_URL } from "../../services/api.js";
 import Loader from "../../components/app/Loader/Loader.jsx";
+import useFetch from "../../hooks/useFetch.js";
 
 const Home = () => {
   const [minPrice, setMinPrice] = useState(0);
   const [maxPrice, setMaxPrice] = useState(0);
   const [values, setValues] = useState([minPrice, maxPrice]);
-  const [products, setProducts] = useState([]);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(undefined);
-
-
-  useEffect(() => {
-    const fetchData = async () => {
-      setLoading(true)
-      try {
-        const response = await fetch(`${BASE_URL}/v1/products`)
-        const result = response.ok && await response.json()
-        console.log(result.products);
-        setProducts(result.products)
-      } catch (error) {
-        setError(error)
-      } finally {
-        setLoading(false)
-      }
-    }
-    fetchData(products, error, loading)
-  }, []);
-
+  const {data , loading }= useFetch("/products")
+  
   const handleRangeChange = (newValues) => {
     setValues(newValues);
     setMinPrice(newValues[0]);
@@ -198,7 +178,7 @@ const Home = () => {
                 </div>
                 <div className="products__body">
                   {
-                    products.map(product =>
+                    data?.products?.map(product =>
                       <ProductCart
                         key={product?._id}
                         img={product?.images[0]}

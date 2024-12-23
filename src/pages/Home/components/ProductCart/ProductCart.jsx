@@ -3,8 +3,12 @@ import "./ProductCart.css"
 import { CiHeart } from 'react-icons/ci';
 import { FaArrowRightArrowLeft } from 'react-icons/fa6';
 import { IoEyeSharp } from 'react-icons/io5';
+import { useState } from 'react';
 
-const ProductCart = ({ img, productName, price , productCategory, onClick }) => {
+const ProductCart = ({ img, productName, price, productCategory, onClick }) => {
+    const [isLoadingImg, setIsLoadingImg] = useState(true);
+    // console.log(isLoadingImg);
+    
     return (
         <div className='product_cart' onClick={onClick}>
             <div className='product_cart_top'>
@@ -12,7 +16,7 @@ const ProductCart = ({ img, productName, price , productCategory, onClick }) => 
                 <span className='product_cart_new'>NEW</span>
             </div>
             <div className='product_cart_image'>
-                <img src={img} alt="product-image" />
+                <img src={img} alt="product-image" onLoad={() => { setIsLoadingImg(false) }} />
             </div>
             <p className='product_cart_category'>{productCategory}</p>
             <p className='product_cart_description'>{productName}</p>
